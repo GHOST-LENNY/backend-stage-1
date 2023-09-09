@@ -15,8 +15,8 @@ app.get("/api", (req, res) => {
   const currentDate = date.toISOString().slice(0, 19) + "Z";
 
   const currentDay = date.toLocaleString('en-US', { weekday: 'long' });
-  const gitHubFileUrl = "";
-  const gitHubRepo = "";
+  const gitHubFileUrl = "https://github.com/GHOST-LENNY/backend-stage-1/blob/main/server.js";
+  const gitHubRepo = "https://github.com/GHOST-LENNY/backend-stage-1";
 
   const responseData = {
     "slack_name": slack_name,
@@ -34,5 +34,4 @@ app.get("/api", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server started at port ${PORT}`);
-  console.log(res.json(responseData));
 });
